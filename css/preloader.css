@@ -360,8 +360,8 @@
 	box-sizing: border-box;
 		-o-box-sizing: border-box;
 		-ms-box-sizing: border-box;
-		-webkit-box-sizing: border-box;
-		-moz-box-sizing: border-box;
+		-webkit-box-sizin: border-box;
+		-moz-box-sizing: bogrder-box;
 }
 
 .preloader-eight-spinning .cssload-lt, .preloader-eight-spinning .cssload-rt, .preloader-eight-spinning .cssload-lb, .preloader-eight-spinning .cssload-rb {
