@@ -734,7 +734,7 @@ fieldset[disabled] .btn-gray.btn-theme-colored.focus {
 */
 .btn-theme-colored {
   color: #fff;
-  background-color: #6AB43E;
+  background-color: orangered;
   border-color: #6AB43E;
 }
 .btn-theme-colored:focus,
