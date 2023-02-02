@@ -15,7 +15,7 @@ COLOR CODE: #6AB43E
 }
 /* background-theme-color */
 .bg-theme-colored {
-  background-color: orangered !important;
+  background-color:  #77c14b !important;
 }
 .bg-theme-colored-lighter2 {
   background-color: #71be43 !important;
@@ -612,7 +612,7 @@ fieldset[disabled] .btn-border.btn-theme-colored.focus {
 */
 .btn-dark.btn-theme-colored {
   color: #fff;
-  background-color: #6AB43E;
+  background-color:#dd8ae4;
   border-color: #6AB43E;
 }
 .btn-dark.btn-theme-colored:focus,
@@ -734,7 +734,7 @@ fieldset[disabled] .btn-gray.btn-theme-colored.focus {
 */
 .btn-theme-colored {
   color: #fff;
-  background-color: orangered;
+  background-color: #dd8ae4;
   border-color: #6AB43E;
 }
 .btn-theme-colored:focus,
