@@ -134,12 +134,16 @@
                 <li><a href="new.html">Novidades</a>
 
                 </li>
-                <li><a href="contato.html">Contato</a>
+                <li><a href="contato.html">Nosso time</a>
 
                 </li>
 
                 </li>
                 <li><a href="transparencia.html">Transparência</a>
+
+                </li>
+
+                <li><a href="page-donate.html">Doe!</a>
 
                 </li>
               </ul>
@@ -973,6 +977,72 @@
                   </div>
                 </article>
               </div>
+              <div class="col-md-12">
+                <h3 class="mt-0 mb-30 line-bottom">Entre em contato</h3>
+                <!-- Contact Form -->
+                <form id="contact_form" name="contact_form" class=""
+                  action="http://thememascot.net/demo/personal/j/ecocharity/v2.0/demo-html/includes/sendmail.php"
+                  method="post" novalidate="novalidate">
+
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label for="form_email">Email <small>*</small></label>
+                        <input id="form_email" name="form_email" class="form-control required email" type="email"
+                          placeholder="" aria-required="true">
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-6">
+
+                    </div>
+                    <div class="col-sm-6">
+
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="form_name">Mensagem <small>*</small></label>
+                    <textarea id="form_message" name="form_message" class="form-control required" rows="5"
+                      placeholder="" aria-required="true"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <input id="form_botcheck" name="form_botcheck" class="form-control" type="hidden" value="">
+                    <button type="submit" class="btn btn-dark btn-theme-colored btn-flat mr-5"
+                      data-loading-text="Please wait...">Enviar</button>
+                    <button type="reset" class="btn btn-default btn-flat btn-theme-colored">Limpar</button>
+                  </div>
+                </form>
+
+                <!-- Contact Form Validation-->
+                <script type="text/javascript">
+                  $("#contact_form").validate({
+                    submitHandler: function (form) {
+                      var form_btn = $(form).find('button[type="submit"]');
+                      var form_result_div = '#form-result';
+                      $(form_result_div).remove();
+                      form_btn.before('<div id="form-result" class="alert alert-success" role="alert" style="display: none;"></div>');
+                      var form_btn_old_msg = form_btn.html();
+                      form_btn.html(form_btn.prop('disabled', true).data("loading-text"));
+                      $(form).ajaxSubmit({
+                        dataType: 'json',
+                        success: function (data) {
+                          if (data.status == 'true') {
+                            $(form).find('.form-control').val('');
+                          }
+                          form_btn.prop('disabled', false).html(form_btn_old_msg);
+                          $(form_result_div).html(data.message).fadeIn('slow');
+                          setTimeout(function () { $(form_result_div).fadeOut('slow') }, 6000);
+                        }
+                      });
+                    }
+                  });
+                </script>
+              </div>
 
             </div>
           </div>
@@ -981,24 +1051,11 @@
 
 
 
-      <!-- Diver: Video Background  -->
-      <!--
-    <section class="divider parallax layer-overlay overlay-dark-5" data-bg-img="images/bg/bg5.jpg" data-parallax-ratio="0.7">
-      <div class="container pt-120 pb-120"> 
-        --><!-- Section Content -->
-      <!--
-        <div class="section-content">
-          <div class="row">
-            <div class="col-md-12 text-center">
-              <h3 class="text-white text-uppercase font-30 font-weight-600 mt-0 mb-20">Watch Our Latest Campaign video</h3>
-              <a href="https://www.youtube.com/watch?v=YzMpNqY9NUg" data-lightbox-gallery="youtube-video"><i class="fa fa-play-circle text-theme-colored font-72"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    -->
+
+
+
+
+
 
 
 
@@ -1027,7 +1084,6 @@
                       Alexsandro Garcia de
                       Seixas</span></span></span></p>
                 </div>
-
               </div>
             </div>
             <div class="col-sm-6 col-md-3">
@@ -1045,104 +1101,146 @@
                       </strong>
                     </div>
                   </article>
+                </div>
+              </div>
+              <!-- ---------------------------------------- -->
+              <div class="widget dark">
+                <h5 class="widget-title line-bottom">Links Importantes</h5>
+                <div class="latest-posts">
+                  <article class="post media-post clearfix pb-0 mb-10">
+                    <a href="https://docs.google.com/forms/d/1Mkj6LBYKd1wdskC5Gqap8413BdHcP41NAOwFD1sv7P8/viewform?edit_requested=true"
+                      target="_blank" class="post-thumb"><img alt="" src="images/blog/mega-menu1.jpg"></a>
+                    <div class="post-right">
+                      <h5 class="post-title mt-0 mb-5"><a
+                          href="https://docs.google.com/forms/d/1Mkj6LBYKd1wdskC5Gqap8413BdHcP41NAOwFD1sv7P8/viewform?edit_requested=true"
+                          target="_blank">Trabalhe Conosco</a></h5>
+                      <strong>
+                        <a href="https://docs.google.com/forms/d/1Mkj6LBYKd1wdskC5Gqap8413BdHcP41NAOwFD1sv7P8/viewform?edit_requested=true"
+                          target="_blank">
+                          <p style="color: green" class="post-date mb-0 font-12">Clique Aqui!</p>
+                        </a>
+                      </strong>
+                    </div>
+                  </article>
+                </div>
+              </div>
+              <div class="widget dark">
 
+                <div class="latest-posts">
+                  <article class="post media-post clearfix pb-0 mb-10">
+                    <a href="transparencia.html" target="_blank" class="post-thumb"><img alt=""
+                        src="images/blog/transp.jpg"></a>
+                    <div class="post-right">
+                      <h5 class="post-title mt-0 mb-5"><a href="transparencia.html" target="_blank">Transparência
+                        </a></h5>
+                      <strong><a href="transparencia.html" target="_blank">
+                          <p style="color: green" class="post-date mb-0 font-12">Clique Aqui!</p>
+                        </a>
+
+                      </strong>
+                    </div>
+                  </article>
                 </div>
               </div>
             </div>
+
+
+
             <div class="col-sm-5 col-md-2">
               <div class="widget dark">
-                <h5 class="widget-title line-bottom">Nossos Parceiros</h5>
+                <h5 class="widget-title line-bottom">Links</h5>
                 <ul class="list angle-double-right list-border">
                   <li><a href="https://www.bancoamazonia.com.br/
-                " target="_blank">BANCO DA AMAZONIA</a></li>
+                      " target="_blank">BANCO DA AMAZONIA</a></li>
                   <li><a href="https://www.itausocial.org.br/" target="_blank">FUNDAÇÃO ITAÚ SOCIAL</a></li>
                   <li><a href="https://doar.gerandofalcoes.com/" target="_blank">GERANDO FALCÕES</a></li>
                   <li><a href="http://www.amazonas.am.gov.br/" target="_blank">GOVERNO DO ESTADO DO AMAZAONAS</a></li>
-
                 </ul>
               </div>
             </div>
             <div class="col-sm-6 col-md-4">
               <div class="widget dark">
-                <h5 class="widget-title line-bottom">Parceiros</h5>
+                <h5 class="widget-title line-bottom">Apoio</h5>
                 <img src="images/parceirosnovos.png">
 
                 <img>
-                <strong>
-                  <p style="color: grey">Associação Cidadania Social e Sustentabilidade - ACSSUS</p>
                 </strong>
                 <ul class="list-inline mt-5">
                   <li class="m-0 pl-10 pr-10"> <i class="fa fa-phone text-theme-colored mr-5"></i> <strong><a
-                        class="text-gray">+55
-                        (92) 9968-0885 (WhatsApp) </a></strong> </li>
+                        class="text-gray">+55 (92)
+                        9968-0885 (WhatsApp) </a></strong> </li>
                   <li class="m-0 pl-10 pr-10"> <i class="fa fa-globe text-theme-colored mr-5"></i> <strong><a
                         class="text-gray">www.acssus.org</a></strong> </li>
-                  <!-- <li class="m-0 pl-10 pr-10"> <i class="fa fa-envelope-o text-theme-colored mr-5"></i> <strong><a class="text-gray" href="https://www.gmail.com" target="_blank">icssus50@gmail.com</a></strong> </li> -->
-                  <!-- <li class="m-0 pl-10 pr-10"> <i class="fa fa-globe text-theme-colored mr-5"></i> <strong><a class="text-gray">www.acssus.org</a></strong> </li> -->
                 </ul>
+                <!-- <li class="m-0 pl-10 pr-10"> <i class="fa fa-envelope-o text-theme-colored mr-5"></i> <strong><a class="text-gray" href="https://www.gmail.com" target="_blank">icssus50@gmail.com</a></strong> </li> -->
+
                 <ul class="social-icons icon-dark icon-theme-colored icon-circled icon-sm mt-15">
                   <li><a href="https://www.facebook.com/acssusparintins" target="_blank"><i
-                        class="fa fa-facebook"></i></a></li>
+                        class="fa fa-facebook"></i></a>
+                  </li>
                   <a href="https://www.instagram.com/acssusoficial/" target="_blank"><i class="fa fa-instagram"></i></a>
-
                 </ul>
               </div>
             </div>
           </div>
         </div>
-    </div>
-    <div class="footer-bottom bg-black-333">
-      <div class="container pt-15 pb-10">
-        <div class="row">
-          <div class="col-md-6">
-            <p class="font-11 text-black-777 m-0 sm-text-center">Copyright &copy;2016 ThemeMascot. All Rights
-              Reserved</p>
-          </div>
-          <div class="col-md-6 text-right">
-            <div class="widget no-border m-0">
-              <ul class="list-inline sm-text-center mt-5 font-12">
-                <li>
-                  <a href="#">FAQ</a>
-                </li>
-                <li>|</li>
-                <li>
-                  <a href="#">Help Desk</a>
-                </li>
-                <li>|</li>
-                <li>
-                  <a href="#">Support</a>
-                </li>
-              </ul>
+        <div class="footer-bottom bg-black-333">
+          <div class="container pt-15 pb-10">
+            <div class="row">
+              <div class="col-md-6">
+                <p class="font-11 text-black-777 m-0 sm-text-center">Copyright &copy;2016 ThemeMascot. All Rights
+                  Reserved
+                </p>
+              </div>
+              <div class="col-md-6 text-right">
+                <div class="widget no-border m-0">
+                  <ul class="list-inline sm-text-center mt-5 font-12">
+                    <li>
+                      <a href="#">FAQ</a>
+                    </li>
+                    <li>|</li>
+                    <li>
+                      <a href="#">Help Desk</a>
+                    </li>
+                    <li>|</li>
+                    <li>
+                      <a href="#">Support</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </footer>
+      <a class="scrollToTop" href="#"><i class="fa fa-angle-up"></i></a>
     </div>
-    </footer>
-    <a class="scrollToTop" href="#"><i class="fa fa-angle-up"></i></a>
-  </div>
-  <!-- end wrapper -->
+    <!-- end wrapper -->
 
-  <!-- Footer Scripts -->
-  <!-- JS | Custom script for all pages -->
-  <script src="js/custom.js"></script>
+    <!-- Footer Scripts -->
+    <!-- JS | Custom script for all pages -->
+    <script src="js/custom.js"></script>
 
-  <!-- SLIDER REVOLUTION 5.0 EXTENSIONS  
+    <!-- SLIDER REVOLUTION 5.0 EXTENSIONS  
       (Load Extensions only on Local File Systems ! 
        The following part can be removed on Server for On Demand Loading) -->
-  <script type="text/javascript" src="js/revolution-slider/js/extensions/revolution.extension.actions.min.js"></script>
-  <script type="text/javascript" src="js/revolution-slider/js/extensions/revolution.extension.carousel.min.js"></script>
-  <script type="text/javascript" src="js/revolution-slider/js/extensions/revolution.extension.kenburn.min.js"></script>
-  <script type="text/javascript"
-    src="js/revolution-slider/js/extensions/revolution.extension.layeranimation.min.js"></script>
-  <script type="text/javascript"
-    src="js/revolution-slider/js/extensions/revolution.extension.migration.min.js"></script>
-  <script type="text/javascript"
-    src="js/revolution-slider/js/extensions/revolution.extension.navigation.min.js"></script>
-  <script type="text/javascript" src="js/revolution-slider/js/extensions/revolution.extension.parallax.min.js"></script>
-  <script type="text/javascript"
-    src="js/revolution-slider/js/extensions/revolution.extension.slideanims.min.js"></script>
-  <script type="text/javascript" src="js/revolution-slider/js/extensions/revolution.extension.video.min.js"></script>
+    <script type="text/javascript"
+      src="js/revolution-slider/js/extensions/revolution.extension.actions.min.js"></script>
+    <script type="text/javascript"
+      src="js/revolution-slider/js/extensions/revolution.extension.carousel.min.js"></script>
+    <script type="text/javascript"
+      src="js/revolution-slider/js/extensions/revolution.extension.kenburn.min.js"></script>
+    <script type="text/javascript"
+      src="js/revolution-slider/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script type="text/javascript"
+      src="js/revolution-slider/js/extensions/revolution.extension.migration.min.js"></script>
+    <script type="text/javascript"
+      src="js/revolution-slider/js/extensions/revolution.extension.navigation.min.js"></script>
+    <script type="text/javascript"
+      src="js/revolution-slider/js/extensions/revolution.extension.parallax.min.js"></script>
+    <script type="text/javascript"
+      src="js/revolution-slider/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script type="text/javascript" src="js/revolution-slider/js/extensions/revolution.extension.video.min.js"></script>
 
 </body>
 

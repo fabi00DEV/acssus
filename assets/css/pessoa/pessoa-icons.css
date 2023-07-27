@@ -1,0 +1,7 @@
+.pessoa__icons{
+    display: flex;
+    flex-direction:column-reverse;
+    align-items: center;
+    text-align: center;
+    
+}
